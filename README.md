@@ -15,4 +15,9 @@ typeof(Foo).InvokeStatic("StaticSum", 1,2);
 ```cs
 // typeof(Foo).GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod)
 typeof(Foo).GetPublicInstanceMethods();
+
+// typeof(Foo).GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.InvokeMethod)
+//     .Select(x => new Tuple<MethodInfo, MyCustomAttribute>(x, x.GetCustomAttribute<T>()))
+//     .Where(x => x.Item2 != null);
+typeof(Foo).GetPublicInstanceMethodsWithAttribute<MyCustomAttribute>()
 ```
