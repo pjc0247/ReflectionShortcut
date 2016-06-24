@@ -3,7 +3,7 @@ A set of shorcuts which helps you to utilize reflection functions.
 
 EXAMPLES
 ----
-__Invoke Member__
+__Invoke__
 ```cs
 var foo = new Foo();
 
